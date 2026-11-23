@@ -11,7 +11,7 @@ Supplementary Table S9 maps each SRA sample to its de-identified subject, visit 
 
 - 44 adults with type 2 asthma, stool sampled at two visits (Time 1, Time 2)
 - 41 non-asthma controls, sampled once
-- 16S rRNA gene V3–V4 amplicon sequencing (Illumina MiSeq, 2 × 300 bp), three sequencing runs
+- 16S rRNA gene V3-V4 amplicon sequencing (Illumina MiSeq, 2 × 300 bp), three sequencing runs
 - ASVs inferred with DADA2; genus, family and phylum tables obtained by summing ASV counts per taxon
 
 ## Analysis steps
@@ -22,12 +22,12 @@ Run the scripts in order from this folder. Each script reads the outputs of the 
 |---|---|---|
 | `R/00_setup.R` | Paths, packages, shared settings | – |
 | `R/01_prepare_data.R` | Taxon filtering (mean relative abundance ≥ 0.1% or ≥ 0.5%, prevalence ≥ 10%); CLR (pseudo-count 0.5) | input for all steps |
-| `R/02_diversity.R` | Alpha diversity; Bray–Curtis PCoA, PERMANOVA; within- vs between-patient dissimilarity; distance to controls | Figure 1A–B, Figure 2A–D |
-| `R/03_stability.R` | ICC per genus; CLR change per genus; community types (PAM, Aitchison distance) | Figure 2E–F, Figure 3 |
-| `R/04_differential_abundance.R` | Patients vs controls, MaAsLin2 (age + sex; + BMI) | Figure 1D, Figure E4B–D, Table S2 |
-| `R/05_clinical_associations.R` | Genus–clinical associations: pooled mixed-effects model and baseline-adjusted change model; 0.5% threshold; treatment subgroups | Figure 4, Figures E7–E8, Tables S6–S7 |
-| `R/06_networks.R` | SPIEC-EASI co-abundance networks, GeneNet co-change networks, modules, module–clinical associations | Figure 5, Figure E9, Tables S3–S5 |
-| `R/07_sensitivity.R` | Excluding 9 previously reported samples; sample map; run-adjusted differential abundance | Tables S8–S10 |
+| `R/02_diversity.R` | Alpha diversity; Bray-Curtis PCoA, PERMANOVA; within- vs between-patient dissimilarity; distance to controls | Figure 1A-B, Figure 2A-D |
+| `R/03_stability.R` | ICC per genus; CLR change per genus; community types (PAM, Aitchison distance) | Figure 2E-F, Figure 3 |
+| `R/04_differential_abundance.R` | Patients vs controls, MaAsLin2 (age + sex; + BMI) | Figure 1D, Figure E4B-D, Table S2 |
+| `R/05_clinical_associations.R` | Genus–clinical associations: pooled mixed-effects model and baseline-adjusted change model; 0.5% threshold; treatment subgroups | Figure 4, Figures E7-E8, Tables S6–S7 |
+| `R/06_networks.R` | SPIEC-EASI co-abundance networks, GeneNet co-change networks, modules, module-clinical associations | Figure 5, Figure E9, Tables S3-S5 |
+| `R/07_sensitivity.R` | Excluding 9 previously reported samples; sample map; run-adjusted differential abundance | Tables S8-S10 |
 
 To run everything at once:
 
